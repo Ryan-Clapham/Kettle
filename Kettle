@@ -1,0 +1,67 @@
+public class Testing {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    System.out.println("Hello World");
+    Kettle Ryan = new Kettle ("Black ", "Russel Hobbs ", 2000);
+    Kettle Sam = new Kettle ("Chrome", "Swan", 1000);
+    System.out.println(Ryan);
+    Ryan.fillUp(100);
+    System.out.println(Ryan);
+    Ryan.poor(50);
+    System.out.println(Ryan);
+    Ryan.poor(50);
+    System.out.println(Ryan);
+    Ryan.poor(50);
+    System.out.println(Ryan);
+    Ryan.fillUp(3000);
+    System.out.println(Ryan);
+	}
+
+}
+
+
+
+
+
+public class Kettle {
+	
+	String color;
+	String manufacturer;
+	int maxCapacity;
+	int currentCapacity; 
+	
+	
+
+	public Kettle(String c, String m, int mc) {
+	System.out.println("A new kettle has been made");
+	this.color = c;
+	this.manufacturer = m;
+	this.maxCapacity = mc;
+	this.currentCapacity = 0;
+	}
+	
+	
+	
+	public void fillUp(int amount) {
+		if(currentCapacity + amount <= maxCapacity) {
+		currentCapacity += amount;
+	}	else {
+		System.out.println("Too much water!");
+	}}
+	
+	
+	
+	public String toString( ) {
+		return color + "" + manufacturer + "" + currentCapacity+"/"+maxCapacity;
+	}
+	
+	
+	
+	public void poor(int amount) {
+		if(currentCapacity >= 50) {
+		currentCapacity -= 50;
+	} else { 
+		System.out.println("Not enough water for a cup of tea.");
+	}	
+}}
